@@ -1,5 +1,5 @@
-> Installation of Nginx and curl localhost via WSL
-
+#Installation of Nginx and curl localhost via WSL
+```bash
 elvir@ElviRose:~$ sudo apt update && sudo apt upgrade -y
 [sudo] password for elvir:
 Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
@@ -674,3 +674,5 @@ Commercial support is available at
 <p><em>Thank you for using nginx.</em></p>
 </body>
 </html>
+...
+```
