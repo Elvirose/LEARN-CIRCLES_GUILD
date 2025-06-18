@@ -1,3 +1,4 @@
+> LINUX CHEAT SHEET
 - pwd                     = Displays the path of the current directory you're in
 - cd                      = Used to navigate to a different directory
 - cd ..                   = Moves one level up to the parent directory
