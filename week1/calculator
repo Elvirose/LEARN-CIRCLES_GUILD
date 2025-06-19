@@ -1,0 +1,59 @@
+#CALCULATOR CLI TOOL 
+#CODE
+print("\n=== Calculator ===")
+print("1.0 for Addition")
+print("2.0 for Subtraction")
+print("3.0 for Multiplication")
+print("4.0 for Division")
+print("5.0 for Modulo")
+
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+
+while True:
+    ch = float(input("Enter your choice: "))
+
+    match ch:
+        case 1.0:
+            print("Result:", a + b)
+        case 2.0:
+            print("Result:", a - b)
+        case 3.0:
+            print("Result:", a * b)
+        case 4.0:
+            if b == 0:
+                print("Error: Division by zero.")
+            else:
+                print("Result:", a / b)
+        case 5.0:
+            if b == 0:
+                print("Error: Modulo by zero.")
+            else:
+                print("Result:", a % b)
+        case _:
+            print("Invalid input entered.")
+            break
+
+#OUTPUT
+PS C:\Users\elvir\Desktop> python cal.py
+
+=== Calculator ===
+1.0 for Addition
+2.0 for Subtraction
+3.0 for Multiplication
+4.0 for Division
+5.0 for Modulo
+Enter first number: 400
+Enter second number: 200
+Enter your choice: 1
+Result: 600.0
+Enter your choice: 2
+Result: 200.0
+Enter your choice: 3
+Result: 80000.0
+Enter your choice: 4
+Result: 2.0
+Enter your choice: 5
+Result: 0.0
+Enter your choice: 6
+Invalid input entered.
