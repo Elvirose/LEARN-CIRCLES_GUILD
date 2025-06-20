@@ -1,62 +1,79 @@
 #CODE
 import random
-num_dice = input("How many dice do you want to roll? [1-6] ")
 
-if num_dice.isdigit() and 1 <= int(num_dice) <= 6:
-    num_dice = int(num_dice)
-else:
-    print("Please enter a number between 1 and 6.")
-    exit()
+def get_user_input():
+    try:
+        num = int(input("How many dice do you want to roll? [1-6] "))
+        if 1 <= num <= 6:
+            return num
+        else:
+            print("Please enter a number between 1 and 6.")
+            exit()
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+        exit()
 
-print("\nRolling the dice...")
-for i in range(num_dice):
-    result = random.randint(1, 6)
-    print(f"Die {i + 1}: {result}")
+def roll_dice(n):
+    results = []
+    for _ in range(n):
+        results.append(random.randint(1, 6))
+    return results
+
+def display_results(results):
+    print("\nRolling the dice...")
+    for i, value in enumerate(results, 1):
+        print(f"Die {i}: {value}")
+
+def main():
+    num_dice = get_user_input()
+    results = roll_dice(num_dice)
+    display_results(results)
+
+main()
 
 #OUTPUT
-  
 PS C:\Users\elvir\Desktop> python dice.py
 How many dice do you want to roll? [1-6] 1
 
 Rolling the dice...
-Die 1: 2
+Die 1: 5
 PS C:\Users\elvir\Desktop> python dice.py
 How many dice do you want to roll? [1-6] 2
 
 Rolling the dice...
 Die 1: 5
-Die 2: 4
+Die 2: 2
 PS C:\Users\elvir\Desktop> python dice.py
 How many dice do you want to roll? [1-6] 3
 
 Rolling the dice...
-Die 1: 6
-Die 2: 4
-Die 3: 2
+Die 1: 2
+Die 2: 1
+Die 3: 4
 PS C:\Users\elvir\Desktop> python dice.py
 How many dice do you want to roll? [1-6] 4
 
 Rolling the dice...
-Die 1: 2
-Die 2: 4
-Die 3: 2
-Die 4: 4
+Die 1: 5
+Die 2: 2
+Die 3: 5
+Die 4: 3
 PS C:\Users\elvir\Desktop> python dice.py
 How many dice do you want to roll? [1-6] 5
 
 Rolling the dice...
-Die 1: 5
-Die 2: 1
-Die 3: 6
-Die 4: 1
-Die 5: 3
+Die 1: 4
+Die 2: 6
+Die 3: 1
+Die 4: 2
+Die 5: 1
 PS C:\Users\elvir\Desktop> python dice.py
 How many dice do you want to roll? [1-6] 6
 
 Rolling the dice...
-Die 1: 1
+Die 1: 3
 Die 2: 5
-Die 3: 5
-Die 4: 4
-Die 5: 6
+Die 3: 2
+Die 4: 3
+Die 5: 5
 Die 6: 5
