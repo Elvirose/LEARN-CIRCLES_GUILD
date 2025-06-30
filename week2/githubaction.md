@@ -4,7 +4,7 @@
 - For Github Action I created a holder .github/workflows/ in my repo
 
 >**Github Action Code**
-
+```
 
 name: Echo Text 
 on:
@@ -19,6 +19,6 @@ jobs:
       - name: Say Hello
         run: echo "Hello from GitHub Actions!" 
 
-
+```
 
 *Screenshot from actions tab in this repo*
