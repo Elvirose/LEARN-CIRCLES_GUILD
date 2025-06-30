@@ -21,4 +21,5 @@ jobs:
 
 ```
 
-*Screenshot from actions tab in this repo*
+*Screenshot from action tab in this repo*
+![image](https://github.com/user-attachments/assets/c36cc108-56f8-4403-a075-a06d8dc814b0)
