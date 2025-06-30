@@ -1,4 +1,4 @@
->Fork, commit, open a PR in GITHUB
+>**Fork, commit, open a PR in GITHUB**
 ```
 PS C:\Users\elvir> gh --version
 gh version 2.74.2 (2025-06-18)
